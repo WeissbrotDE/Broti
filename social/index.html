@@ -43,18 +43,7 @@
   <div id="menu-background-pattern"></div>
   <div id="menu-background-image"></div>
 </div>
-
-<script>
-  const menu = document.getElementById("menu");
-
-Array.from(document.getElementsByClassName("menu-item"))
-  .forEach((item, index) => {
-    item.onmouseover = () => {
-      menu.dataset.activeIndex = index;
-    }
-  });
-</script>
-
+    
 <style>
   body {
   background-color: rgb(20, 20, 20);
