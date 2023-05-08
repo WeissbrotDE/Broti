@@ -5,7 +5,7 @@
     <title>Zeit seit 06:09 Uhr am 8. Mai 2023</title>
     <script>
       function updateTimer() {
-        const startTime = new Date("2023-05-08T06:09:00Z");
+        const startTime = new Date("2023-05-08T06:09:00+02:00");
         const currentTime = new Date();
         const timeDiff = Math.floor((currentTime - startTime) / 1000);
         const seconds = timeDiff % 60;
@@ -19,8 +19,8 @@
     </script>
   </head>
   <body>
-    <h1>Zeit seit 06:09 Uhr am 8. Mai 2023</h1>
-    <p>Seit dem 8. Mai 2023 um 06:09 Uhr sind vergangen:</p>
+    <h1>Zeit seit 06:09 Uhr am 8. Mai 2023 (Berlin)</h1>
+    <p>Seit dem 8. Mai 2023 um 06:09 Uhr in Berlin sind vergangen:</p>
     <p id="timer"></p>
   </body>
 </html>
