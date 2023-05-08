@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Zeit seit 06:09 Uhr am 8. Mai 2023</title>
+    <script>
+      function updateTimer() {
+        const startTime = new Date("2023-05-08T06:09:00Z");
+        const currentTime = new Date();
+        const timeDiff = Math.floor((currentTime - startTime) / 1000);
+        const seconds = timeDiff % 60;
+        const minutes = Math.floor(timeDiff / 60) % 60;
+        const hours = Math.floor(timeDiff / 3600) % 24;
+        const days = Math.floor(timeDiff / 86400);
+        const timerElement = document.getElementById("timer");
+        timerElement.innerHTML = `${days} Tage, ${hours} Stunden, ${minutes} Minuten und ${seconds} Sekunden`;
+      }
+      setInterval(updateTimer, 1000);
+    </script>
+  </head>
+  <body>
+    <h1>Zeit seit 06:09 Uhr am 8. Mai 2023</h1>
+    <p>Seit dem 8. Mai 2023 um 06:09 Uhr sind vergangen:</p>
+    <p id="timer"></p>
+  </body>
+</html>
