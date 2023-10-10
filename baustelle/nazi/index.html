@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wie Nazi bist du?</title>
+    <title>Wie Baum bist du?</title>
     <style>
         body {
             background-color: brown;
@@ -13,6 +13,14 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+        }
+
+        #text {
+            text-align: center;
+        }
+
+        h1 {
+            color: white; /* Schriftzug in weiß ändern */
         }
 
         #result {
@@ -35,7 +43,6 @@
             padding: 10px 20px;
             border: none;
             cursor: pointer;
-            display: none;
         }
 
         @keyframes countUp {
@@ -51,17 +58,23 @@
     </style>
 </head>
 <body>
+    <div id="text">
+        <h1>Wie Baum bist du?</h1>
+        <button id="calculateButton">Finde es heraus!</button>
+    </div>
     <div id="result"></div>
     <div id="count-up"></div>
-    <button id="calculateButton">Finde es heraus!</button>
 
     <script>
         document.getElementById("calculateButton").addEventListener("click", function() {
+            document.getElementById("text").style.display = "none"; // Text und Knopf ausblenden
+
             // Zufällige Zahl zwischen 0 und 100 generieren
             var randomPercentage = Math.floor(Math.random() * 101);
 
-            // Das Ergebnis anzeigen und animieren
-            document.getElementById("result").textContent = "Du bist " + randomPercentage + "% Nazi!";
+            // Den Schriftzug mit dem Zähler aktualisieren
+            var resultText = "Du bist " + randomPercentage + "% Baum!";
+            document.getElementById("result").textContent = resultText;
             document.getElementById("count-up").textContent = "0%";
             document.getElementById("result").style.display = "block";
             document.getElementById("count-up").style.display = "block";
@@ -74,7 +87,6 @@
                     counter++;
                 } else {
                     clearInterval(interval);
-                    document.getElementById("calculateButton").style.display = "none";
                 }
             }, 20);
         });
