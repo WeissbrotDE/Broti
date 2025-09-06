@@ -1,0 +1,10 @@
+[Interface]
+PrivateKey = iFAkDiBJ/9uX/eIVPl9jxDhbSbeYcElKKQvEL
+Address = 198.18.0.9/15
+MTU = 1420
+
+[Peer]
+PublicKey = t/mSzq6RJi1IgclpZk5+mTYgjHLgLu/a9A
+AllowedIPs = 198.18.0.8/15
+PersistentKeepalive = 25
+Endpoint = 85.215.249.131:50120
